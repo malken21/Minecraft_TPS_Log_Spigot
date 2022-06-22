@@ -1,0 +1,2 @@
+# Minecraft_TPS_Log_plugin
+TPSがConfig.ymlで設定した値以下になるとサーバーのログやDiscordにTPSなどの情報を送信するSpigotプラグイン
