@@ -27,4 +27,4 @@ playerList: true
 UUID: true
 
 #何tickに1回TPSを計測するか
-tick: 300
+tick: 600
