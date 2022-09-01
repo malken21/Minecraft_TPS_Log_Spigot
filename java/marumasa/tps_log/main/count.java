@@ -54,11 +54,16 @@ public class count extends BukkitRunnable {
                     StringBuilder playerList = new StringBuilder("   ").append(config.playerListText).append("[  ");
                     if (config.UUID) {
                         for (Player player : Players) {
-                            playerList.append(player.getDisplayName()).append(" : ").append(player.getUniqueId()).append("  ");
+                            playerList
+                                    .append(player.getDisplayName().replaceAll("§([0-9a-f]|r|l|o|n|m|k)", ""))
+                                    .append(" : ").append(player.getUniqueId())
+                                    .append("  ");
                         }
                     } else {
                         for (Player player : Players) {
-                            playerList.append(player.getDisplayName()).append("  ");
+                            playerList
+                                    .append(player.getDisplayName().replaceAll("§([0-9a-f]|r|l|o|n|m|k)", ""))
+                                    .append("  ");
                         }
                     }
                     playerList.append("]");
