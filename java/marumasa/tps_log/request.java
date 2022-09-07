@@ -6,7 +6,7 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 
 public class request {
-    public static void post(String URL, String JSON) {
+    public static void post(final String URL, final String JSON) {
         try {
             URL url = new URL(URL);
             HttpURLConnection uc;
