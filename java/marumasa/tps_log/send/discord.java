@@ -3,9 +3,7 @@ package marumasa.tps_log.send;
 import marumasa.tps_log.Config;
 import marumasa.tps_log.request;
 import marumasa.tps_log.util.time;
-import org.bukkit.Bukkit;
 
-import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
