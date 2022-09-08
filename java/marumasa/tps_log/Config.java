@@ -22,18 +22,10 @@ public class Config {
     public final int WarnTPS;
     public final long tick;
     public final boolean playerList;
-    public final boolean World;
-    public final boolean Location;
     public final boolean UUID;
-    public final int EmbedColor;
-
     public final String playerListText;
-    public final String playerNameText;
-    public final String playerWorldText;
-    public final String playerLocationText;
-    public final String playerUUIDText;
 
-    public Config(final minecraft plugin) {
+    public Config(minecraft plugin) {
         plugin.saveDefaultConfig();
         FileConfiguration config = plugin.getConfig();
 
@@ -51,21 +43,12 @@ public class Config {
         MaxTPS = config.getInt("MaxTPS");
         URL = config.getString("WebhookURL");
         Discord = config.getBoolean("Discord");
-        Log = config.getBoolean("ServerLog");
+        Log = config.getBoolean("Log");
         LoadText = config.getString("status.LoadText");
         WarnTPS = config.getInt("WarnTPS");
         tick = config.getLong("tick");
-        EmbedColor = config.getInt("EmbedColor");
-
         playerList = config.getBoolean("playerList");
-        World = config.getBoolean("World");
-        Location = config.getBoolean("Location");
         UUID = config.getBoolean("UUID");
-
         playerListText = config.getString("playerListText");
-        playerNameText = config.getString("playerNameText");
-        playerWorldText = config.getString("playerWorldText");
-        playerLocationText = config.getString("playerLocationText");
-        playerUUIDText = config.getString("playerUUIDText");
     }
 }

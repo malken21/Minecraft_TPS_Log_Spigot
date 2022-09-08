@@ -8,7 +8,7 @@ public class tps extends BukkitRunnable {
     private final minecraft mc;
     private final Config config;
 
-    public tps(final minecraft minecraft, final Config data) {
+    public tps(minecraft minecraft, Config data) {
         mc = minecraft;
         config = data;
     }

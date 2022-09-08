@@ -5,34 +5,26 @@ status:
     Medium: 10
     High: 5
   Text:
-    VeryLow: "VeryLow"
-    Low: "Low"
-    Medium: "Medium"
-    High: "High"
-    VeryHigh: "VeryHigh"
-  LoadText: "Load : "
+    VeryLow: "最低"
+    Low: "低"
+    Medium: "中"
+    High: "高"
+    VeryHigh: "最高"
+  LoadText: "負荷 : "
 
+#最大TPS
 MaxTPS: 20
 
-WarnTPS: 18
+WarnTPS: 18 #TPSが いくつ以下になったらTPSの情報を送信するか
 
-#Discord Webhook
+#DiscordのWebhook
 WebhookURL: ""
-#Discord Embed Color
-EmbedColor: 12915218
-Discord: false
+Discord: false #DiscordにTPSを送信するかどうか
+Log: true #ログにTPSを送信するかどうか
 
-ServerLog: true
-
-playerListText: "Player List"
-playerNameText: "Name"
-playerWorldText: "World"
-playerLocationText: "Location"
-playerUUIDText: "UUID"
-
+playerListText: "現在サーバーにいるプレイヤー : "
 playerList: true
-World: true
-Location: true
-UUID: false
+UUID: true
 
+#何tickに1回TPSを計測するか
 tick: 600
