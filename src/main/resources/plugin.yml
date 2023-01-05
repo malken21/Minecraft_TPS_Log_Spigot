@@ -1,4 +1,8 @@
-name: Tps_log
+name: HideNametagCMD
 version: '${version}'
-main: marumasa.tps_log.minecraft
-api-version: 1.16
+main: marumasa.hide_nametag_cmd.minecraft
+api-version: 1.19
+
+commands:
+  nttoggle:
+    description: "Name tag display switching command"
