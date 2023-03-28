@@ -14,7 +14,7 @@ public class map {
             final Map<String, String> data = new HashMap<>();
 
             //-----PlayerData-----//
-            data.put("name", player.getDisplayName().replaceAll("§([0-9a-f]|r|l|o|n|m|k)", ""));
+            data.put("name", player.getDisplayName().replaceAll("§.", ""));
             if (World)
                 data.put("world", player.getWorld().getName());
             if (Location)

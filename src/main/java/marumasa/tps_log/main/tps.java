@@ -15,6 +15,6 @@ public class tps extends BukkitRunnable {
 
     @Override
     public void run() {
-        new count(config).runTaskTimer(mc, 0L, 300L);
+        new count(config).runTaskLater(mc, 300L);
     }
 }

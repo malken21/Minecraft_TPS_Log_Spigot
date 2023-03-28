@@ -13,41 +13,37 @@ import java.util.List;
 import java.util.Map;
 
 public class count extends BukkitRunnable {
-    private Date date = null;
+    private final Date date;
     private final Config config;
 
     public count(final Config data) {
         config = data;
+        date = new Date();
     }
 
     @Override
     public void run() {
-        if (date == null) {
-            date = new Date();
-        } else {
-            final double start = date.getTime();
-            final double end = new Date().getTime();
+        final double start = date.getTime();
+        final double end = new Date().getTime();
 
-            double result = 300 * 1000 / (end - start);
+        double result = 300 * 1000 / (end - start);
 
-            if (result <= config.WarnTPS) {//-----Start!!-----//
+        if (result <= config.WarnTPS) {//-----Start!!-----//
 
-                final String TextTPS = text.TextTPS(result, config);
-                if (config.playerList) {
-                    final List<Map<String, String>> playerMap = map.playerMap(//Display PlayerData List
-                            Bukkit.getServer().getOnlinePlayers(),
-                            config.World,
-                            config.Location,
-                            config.UUID
-                    );
-                    if (config.Discord) new discord(config, TextTPS, playerMap).start();
-                    if (config.Log) log.send(config, TextTPS, playerMap);
-                } else {
-                    if (config.Discord) new discord(config, TextTPS).start();
-                    if (config.Log) log.send(TextTPS);
-                }
+            final String TextTPS = text.TextTPS(result, config);
+            if (config.playerList) {
+                final List<Map<String, String>> playerMap = map.playerMap(//Display PlayerData List
+                        Bukkit.getServer().getOnlinePlayers(),
+                        config.World,
+                        config.Location,
+                        config.UUID
+                );
+                if (config.Discord) new discord(config, TextTPS, playerMap).start();
+                if (config.Log) log.send(config, TextTPS, playerMap);
+            } else {
+                if (config.Discord) new discord(config, TextTPS).start();
+                if (config.Log) log.send(TextTPS);
             }
-            this.cancel();
         }
     }
 }
