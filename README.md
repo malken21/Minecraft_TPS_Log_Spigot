@@ -1,4 +1,4 @@
-# Minecraft_TPS_Log_plugin
+# TPS-Log
 TPSがConfig.ymlで設定した値以下になるとサーバーのログやDiscordにTPSなどの情報を送信するSpigotプラグイン
 <br>
 Discordに送信する場合はウェブフックを作りそのURLをconfig.ymlに設定しDiscord: falseをtrueにすることで使えるようになります
