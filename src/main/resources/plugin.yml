@@ -1,4 +1,4 @@
 name: Tps_log
 version: '${version}'
 main: marumasa.tps_log.minecraft
-api-version: 1.16
+api-version: 1.8
